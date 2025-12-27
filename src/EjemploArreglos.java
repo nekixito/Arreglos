@@ -5,6 +5,10 @@ public class EjemploArreglos {
 
         String[] productos = new String[7];
 
+        int totalElementos = productos.length;
+
+
+        
         productos[0] = "Kingtone Pendrive 64GB";
         productos[1] = "Samsung Galaxy";
         productos[2] = "Disco Duro SSD Samsung Externo";
@@ -15,38 +19,42 @@ public class EjemploArreglos {
 
         Arrays.sort(productos);
 
-        System.out.println("productos[0] = " + productos[0]);
-        System.out.println("productos[1] = " + productos[1]);
-        System.out.println("productos[2] = " + productos[2]);
-        System.out.println("productos[3] = " + productos[3]);
-        System.out.println("productos[4] = " + productos[4]);
-        System.out.println("productos[5] = " + productos[5]);
-        System.out.println("productos[6] = " + productos[6]);
-        int[] numeros = new int[4];
+        System.out.println("--------- Usando for -----------------------");
+        for (int i = 0; i < totalElementos; i++) {
+            System.out.println("Para indice " + i + " : " + productos[i]);
+        }
 
-        numeros[0] = 10;
-        numeros[1] = Integer.valueOf("7");
-        numeros[2] = 35;
-        numeros[3] = -1;
+        System.out.println("--------- Usando foreach -------------------");
+        for (String producto : productos){
+            System.out.println("producto = " + producto);
+        }
 
-        Arrays.sort(numeros);
+        System.out.println("--------- Usando while ---------------------");
+        int i = 0;
+        while(i < totalElementos){
+            System.out.println("Para indice " + i + " : " + productos[i]);
+            i++;
+        }
 
-        int i = numeros[0];
-        int j = numeros[1];
-        int k = numeros[2];
-        int l = numeros[numeros.length-1];
+        System.out.println("--------- Usando do while ------------------");
+        int j = 0;
+        do{
+            System.out.println("Para indice " + j + " : " + productos[j]);
+            j++;
+        }while(j < totalElementos);
 
 
+        int[] numeros = new int[10];
+        int totalNumeros = numeros.length;
 
-        System.out.println("i = " + i);
-        System.out.println("j = " + j);
-        System.out.println("k = " + k);
-        System.out.println("l = " + l);
+        for (int k = 0; k < totalNumeros; k++) {
+            numeros[k] = k * 3;
+        }
 
-        System.out.println("numeros[1] = " + numeros[1]);
-        System.out.println("numeros[2] = " + numeros[2]);
-        System.out.println("numeros[3] = " + numeros[3]);
-        System.out.println("numeros[0] = " + numeros[0]);
+        for (int k = 0; k < totalNumeros; k++) {
+            System.out.println("numeros = " + numeros[k]);
+        }
+        
 
 
 
